@@ -1,0 +1,21 @@
+version: "3"
+services:
+  consumer-service:
+    image: vinayakbagal7/consumer-service
+    ports:
+      - "8080:8080"
+    networks:
+      - consumer-network
+    depends_on:
+      - mysqldb
+ 
+  mysqldb:
+    image: mysql:8
+    networks:
+      - consumer-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=consumer  
+
+networks:
+  consumer-network: 
