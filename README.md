@@ -46,3 +46,7 @@ docker rm <container-id/name>
 docker stop <container-id/name>
 
 docker rmi <image-id/name>
+
+docker-compose pull
+docker-compose up
+docker-compose down
