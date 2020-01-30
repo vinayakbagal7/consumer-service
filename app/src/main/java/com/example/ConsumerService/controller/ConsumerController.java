@@ -20,6 +20,7 @@ public class ConsumerController {
 
 	@RequestMapping("/consumer")
 	public List<Consumer> getAllConsumer(){
+		System.out.println("get all customers");
 		return consumerService.findAll();
 	}
 	
