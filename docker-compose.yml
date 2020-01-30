@@ -8,6 +8,7 @@ services:
       - consumer-network
     depends_on:
       - mysqldb
+    container_name: "consumer-service"
  
   mysqldb:
     image: mysql:8
@@ -16,6 +17,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=consumer  
+    container_name: "mysqldb"
 
 networks:
-  consumer-network: 
+  consumer-network:
