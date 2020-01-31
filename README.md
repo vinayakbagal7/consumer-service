@@ -22,7 +22,7 @@ mvn compile jib:build -Dimage=vinayakbagal7/consumer-service
 
 
 #Docker build -
-docker build .t vinayakbagal7/consumer-service
+docker build -t vinayakbagal7/consumer-service .
 
 #Docker container run
 docker run --name consumer-service -d -p 8080:8080 --network consumer-mysql vinayakbagal7/consumer-service
